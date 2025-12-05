@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/widgets/follower_story.dart';
-import 'package:instagram/widgets/reals.dart';
-import 'package:instagram/widgets/static_user_story.dart';
+import 'package:instagram/widgets/home%20screen/follower_story.dart';
+import 'package:instagram/widgets/home%20screen/reals.dart';
+import 'package:instagram/widgets/home%20screen/static_user_story.dart';
 
 class MainInterferance extends StatelessWidget {
   const MainInterferance({super.key});

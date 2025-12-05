@@ -19,12 +19,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        textSelectionTheme: TextSelectionThemeData(cursorColor: Colors.white60),
+        textTheme: Theme.of(
+          context,
+        ).textTheme.apply(bodyColor: Colors.white.withValues(alpha: 0.7)),
         scaffoldBackgroundColor: Colors.black,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
       title: 'Instagram clone',
       home: BottomNavBar(),
-    
     );
   }
 }

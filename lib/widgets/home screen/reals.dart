@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/widgets/video_player.dart';
+import 'package:instagram/widgets/home%20screen/video_player.dart';
 
 class RealsWidget extends StatelessWidget {
   const RealsWidget({

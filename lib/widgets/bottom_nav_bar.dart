@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/home_page.dart';
+import 'package:instagram/screens/messages.dart';
 import 'package:instagram/screens/under_process.dart';
 // import 'package:instagram/screens/main_interferance.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
@@ -30,7 +31,7 @@ class BottomNavBar extends StatelessWidget {
           ),
         ),
         PersistentTabConfig(
-          screen: const UnderProcess(),
+          screen: const MessagesScreen(),
           item: ItemConfig(
             icon: const Icon(Icons.share),
             activeForegroundColor: Colors.white.withValues(alpha: 0.7),
@@ -49,7 +50,7 @@ class BottomNavBar extends StatelessWidget {
         ),PersistentTabConfig(
           screen: const UnderProcess(),
           item: ItemConfig(
-            icon: const Icon(Icons.person_off_outlined, ),
+            icon: const Icon(Icons.person, ),
             activeForegroundColor: Colors.white.withValues(alpha: 0.7),
             inactiveBackgroundColor: const Color.fromARGB(0, 0, 0, 0)
             
