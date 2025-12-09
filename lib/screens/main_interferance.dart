@@ -11,12 +11,29 @@ class MainInterferance extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+
+          //////////////////////////////////
+         //// User Profile To post story //    just make a widget for that
+        //////////////////////////////////
+
           SizedBox(height: 15),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                StaticUserStory(),
+
+                ///////////////////////////
+               //// User Profile Story ///
+              ///////////////////////////
+              
+              
+              StaticUserStory(),
+
+
+                ///////////////////////////////
+               //// Follower Story Objects ///
+              ///////////////////////////////
+              
                 FollowerStory(
                   image:
                       'https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL3JtNTk3ZGVzaWduLWMtYnVzLTAwMS5qcGc.jpg',
@@ -45,6 +62,11 @@ class MainInterferance extends StatelessWidget {
               ],
             ),
           ),
+
+          /////////////
+         /// Reels ///
+        /////////////
+
           RealsWidget(
             user: 'mr._.annonymus',
             description: 'Just posted a new reels.',
@@ -61,7 +83,8 @@ class MainInterferance extends StatelessWidget {
             videoUrl:
                 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
             daysAgo: '1',
-            image:'https://i.pinimg.com/474x/45/09/c4/4509c44350acd454ec67edd3bd11f758.jpg',
+            image:
+                'https://i.pinimg.com/474x/45/09/c4/4509c44350acd454ec67edd3bd11f758.jpg',
             ads: 'Sponsored',
           ),
         ],
