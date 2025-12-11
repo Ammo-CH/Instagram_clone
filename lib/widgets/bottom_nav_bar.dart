@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/home_page.dart';
 import 'package:instagram/screens/messages.dart';
+import 'package:instagram/screens/reels_screen.dart';
 import 'package:instagram/screens/under_process.dart';
 // import 'package:instagram/screens/main_interferance.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
@@ -22,7 +23,7 @@ class BottomNavBar extends StatelessWidget {
           ),
         ),
         PersistentTabConfig(
-          screen: const UnderProcess(),
+          screen: const ReelsScreen(),
           item: ItemConfig(
             icon: const Icon(Icons.video_collection_outlined),
             activeForegroundColor: Colors.white.withValues(alpha: 0.7),

@@ -13,7 +13,7 @@ class MessagesScreen extends StatelessWidget {
         leading: Container(),
         title: Center(
           child: Text(
-            'Nothing',
+            'Xavier',
             style: TextStyle(color: Colors.white.withValues(alpha: 0.7)),
           ),
         ),
@@ -117,7 +117,7 @@ class MessagesScreen extends StatelessWidget {
                 ),
                 ChatPerson(
                   userName: "Sharjeel Abbas",
-                  message: "random random random random raandom random random random random random random random random random random ranodm random.",
+                  message: "Nothing beats the jet 2u holidays and right now u can save 50 pounds per persons That's a family of full .",
                   days: '3w',
                   userImage: "https://images.pexels.com/photos/30124921/pexels-photo-30124921.jpeg"
                 ),
