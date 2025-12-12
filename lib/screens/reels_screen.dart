@@ -98,8 +98,11 @@ class ReelsScreen extends StatelessWidget {
                   ),
                 ),
               ],
+
             ),
+
           ),
+          Text("data")
         ],
       ),
     );
