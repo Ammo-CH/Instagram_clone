@@ -8,7 +8,7 @@ class ReelsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.add, color: Colors.white.withValues(alpha: 0.7),)),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -19,7 +19,7 @@ class ReelsScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.filter_1_outlined)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.filter_1_outlined, color: Colors.white.withValues(alpha: 0.7),)),
         ],
       ),
       body: PageView.builder(
