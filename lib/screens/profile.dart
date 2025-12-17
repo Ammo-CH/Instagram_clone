@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/widgets/profile%20screen/profile_tabs.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -126,7 +127,6 @@ class ProfileScreen extends StatelessWidget {
               ),
               SizedBox(width: 4),
 
-              // Expanded(child: Container()),
               Expanded(
                 child: ElevatedButton(
                   onPressed: () {},
@@ -165,6 +165,11 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
+
+          ////////////////////////////
+          //// Tabs intergrations ////
+          ////////////////////////////
+        ProfileTabs()
         ],
       ),
     );
