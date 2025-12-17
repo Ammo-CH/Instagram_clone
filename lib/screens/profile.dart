@@ -169,7 +169,7 @@ class ProfileScreen extends StatelessWidget {
           ////////////////////////////
           //// Tabs intergrations ////
           ////////////////////////////
-        ProfileTabs()
+          ProfileTabs(),
         ],
       ),
     );
