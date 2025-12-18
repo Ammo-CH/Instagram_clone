@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:instagram/widgets/bottom_nav_bar.dart';
+import 'package:instagram/screens/login%20screen/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
       title: 'Instagram clone',
-      home: BottomNavBar(),
+      home: LoginScreen()
+      // BottomNavBar(),
     );
   }
 }

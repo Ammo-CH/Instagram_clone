@@ -44,9 +44,9 @@ class _ProfileTabsState extends State<ProfileTabs>
             child: TabBarView(
               controller: _tabController,
               children: [
-                Center(child: Text('data')),
-                Center(child: Text('data')),
-                Center(child: Text('data')),
+                Center(child: Text('Post')),
+                Center(child: Text('Videos')),
+                Center(child: Text('Repost')),
               ],
             ),
           ),
