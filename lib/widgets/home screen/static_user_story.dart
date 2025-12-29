@@ -30,7 +30,6 @@ class StaticUserStory extends StatelessWidget {
                   Positioned(
                     bottom: 4,
                     left: 48,
-        
                     child: Container(
                       width: 22,
                       height: 22,
