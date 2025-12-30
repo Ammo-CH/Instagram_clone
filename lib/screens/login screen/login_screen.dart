@@ -11,11 +11,7 @@ class LoginScreen extends StatelessWidget {
   final _key = GlobalKey<FormState>();
 
   var _isLogin = true;
-
   var _enteredEmail = '';
-
-  var _enteredUserName = '';
-
   var _enteredPassword = '';
 
   // var _isAuthenticating = true;
@@ -48,11 +44,7 @@ class LoginScreen extends StatelessWidget {
         FirebaseFirestore.instance
             .collection('Users')
             .doc(userCredentials.user!.uid)
-            .set({
-              'Email': _enteredEmail,
-              'Username': _enteredUserName,
-              'password': _enteredPassword,
-            });
+            .set({'Email': _enteredEmail, 'password': _enteredPassword});
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => BottomNavBar()),
@@ -89,6 +81,7 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: TextFormField(
+                  onFieldSubmitted: (value) => _submit(context),
                   decoration: InputDecoration(
                     isDense: true,
                     hintText: "Phone number, username, or email address",
@@ -102,7 +95,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   validator: (value) {
-                    if (value == null ||  
+                    if (value == null ||
                         value.trim().isEmpty ||
                         !value.contains('@')) {
                       return 'Please Enter a valid email';
@@ -116,44 +109,11 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 12),
 
-              if (!_isLogin)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: Column(
-                    children: [
-                      TextFormField(
-                        decoration: InputDecoration(
-                          isDense: true,
-                          hintText: "Enter valid a username.",
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5),
-                            borderSide: BorderSide(color: Colors.grey),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5),
-                            borderSide: BorderSide(color: Colors.white),
-                          ),
-                        ),
-                        validator: (value) {
-                          if (value == null ||
-                              value.trim().isEmpty ||
-                              value.length < 5) {
-                            return 'Please Enter a valid username';
-                          }
-                          return null;
-                        },
-                        onSaved: (value) {
-                          _enteredEmail = value!;
-                        },
-                      ),
-                      SizedBox(height: 12),
-                    ],
-                  ),
-                ),
-
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: TextFormField(
+                  onFieldSubmitted: (value) => _submit(context),
+
                   decoration: InputDecoration(
                     isDense: true,
                     hintText: "Password",
@@ -172,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                     if (value == null ||
                         value.trim().isEmpty ||
                         value.length < 8) {
-                      return 'Please Enter a valid username';
+                      return 'Password must be 8 characters long';
                     }
                     return null;
                   },

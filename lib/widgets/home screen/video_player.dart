@@ -23,7 +23,7 @@ class _VideoPlayerState extends State<VideoPlayerWidget> {
           )
           ..initialize().then((_) {
             setState(() {});
-            _controller.setVolume(50);
+            _controller.setVolume(0);
             _controller.play();
           });
   }

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';/
 import 'package:flutter/material.dart';
 
 class ChatMessages extends StatelessWidget {
@@ -17,7 +17,13 @@ class ChatMessages extends StatelessWidget {
 
       builder: (context, chatsnapshot) {
         if (chatsnapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator();
+          return Center(
+            child: SizedBox(
+              height: 75,
+              width: 75,
+              child: CircularProgressIndicator(),
+            ),
+          );
         }
         if (!chatsnapshot.hasData || chatsnapshot.data!.docs.isEmpty) {
           return const Center(child: Text('No message found'));
@@ -28,9 +34,7 @@ class ChatMessages extends StatelessWidget {
         final loadMessages = chatsnapshot.data!.docs;
         return ListView.builder(
           itemCount: loadMessages.length,
-          itemBuilder: (ctx, index) {
-            
-          },
+          itemBuilder: (ctx, index) {},
         );
       },
     );

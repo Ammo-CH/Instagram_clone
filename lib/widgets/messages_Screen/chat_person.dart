@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/widgets/messages_Screen/live_chat.dart';
+import 'package:instagram/screens/chat_screen.dart';
+// import 'package:instagram/widgets/messages_Screen/new_chat.dart';
 
 class ChatPerson extends StatelessWidget {
   const ChatPerson({
@@ -20,7 +21,7 @@ class ChatPerson extends StatelessWidget {
     return InkWell(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => LiveChat()),
+        MaterialPageRoute(builder: (context) => ChatScreen()),
       ),
       child: Container(
         padding: EdgeInsets.only(bottom: 15),
