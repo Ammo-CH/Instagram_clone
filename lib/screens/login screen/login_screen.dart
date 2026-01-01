@@ -82,8 +82,10 @@ class LoginScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: TextFormField(
                   onFieldSubmitted: (value) => _submit(context),
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     isDense: true,
+                    
                     hintText: "Phone number, username, or email address",
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
@@ -113,6 +115,7 @@ class LoginScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: TextFormField(
                   onFieldSubmitted: (value) => _submit(context),
+                  // keyboardType: TextInputType.number,
 
                   decoration: InputDecoration(
                     isDense: true,
